@@ -1,15 +1,17 @@
 # CoinPrediction-Contest
 
-# We use React, Python, Docker
+# We use React, Spring Boot, Python, Docker
 ------------------------------------------------
 1. FrontEnd : React
 2. BackEnd : No decision
 3. Data : Python and Docker Running
 
 # FrontEnd 
-
+------------------------------------------------
+React
 # BackEnd
-
+------------------------------------------------
+Spring Boot
 # Data
 ----------------------------------------------
 Using UpBitAPI get Coin Price
