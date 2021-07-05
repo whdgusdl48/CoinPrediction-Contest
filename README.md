@@ -3,7 +3,7 @@
 # We use React, Spring Boot, Python, Docker
 ------------------------------------------------
 1. FrontEnd : React
-2. BackEnd : No decision
+2. BackEnd : Spring Boot
 3. Data : Python and Docker Running
 
 # FrontEnd 
