@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
 
     main {
         padding-top: 70px;
+        min-height: calc(100vh - 120px);
 
         @media only screen and (max-width: 800px) {
             padding-top: 50px;
