@@ -149,6 +149,10 @@ const BlackScreen = styled.div`
     z-index: 999;
     background-color: #000;
     opacity: 0.6;
+
+    @media only screen and (max-width: 800px) {
+        display: none;
+    }
 `;
 
 export default withRouter(
