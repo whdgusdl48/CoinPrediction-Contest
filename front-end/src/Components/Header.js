@@ -69,10 +69,12 @@ const Gnb = styled.div`
         flex-direction: column;
         justify-content: initial;
         align-items: initial;
-        max-height: ${({ isOn }) => (isOn ? "291px" : "0")};
+        max-height: ${({ isOn }) => (isOn ? "290px" : "0")};
         overflow: hidden;
         background-color: #fff;
-        border-bottom: 1.5px solid #bcc8e0;
+        border: ${({ isOn }) => (isOn ? "1.5px" : "0")} solid #bcc8e0;
+        border-left: none;
+        border-right: none;
         transition: max-height ${({ isBtn }) => (isBtn ? "0.3s" : "0s")}
             ease-in-out;
     }
@@ -93,11 +95,11 @@ const NavGroup = styled.ul`
 const NavLink = styled.li`
     margin-left: 30px;
     font-weight: 500;
-    color: ${({ isRoot, isCurrent }) => {
+    color: ${({ isRoot, isCurrent, isNav }) => {
         if (isRoot) {
             return "#000";
         } else {
-            return isCurrent ? "#FFF" : "#677FAF";
+            return isCurrent || !isNav ? "#FFF" : "#677FAF";
         }
     }};
 
@@ -107,13 +109,15 @@ const NavLink = styled.li`
 
     @media only screen and (max-width: 800px) {
         margin: 0;
-        /* color: ${({ isCurrent }) => (isCurrent ? "#093687" : "#000")}; */
-        color: #000;
+        color: ${({ isCurrent }) => (isCurrent ? "#fff" : "#000")};
+        background-color: ${({ isCurrent }) =>
+            isCurrent ? "#093687" : "#fff"};
         border-bottom: 1.5px solid #bcc8e0;
         width: 100%;
 
         &:hover {
-            color: #093687;
+            color: #fff;
+            background-color: #093687;
         }
         & > a {
             display: block;
@@ -186,6 +190,7 @@ export default withRouter(
                                     <NavLink
                                         isRoot={isRoot}
                                         isCurrent={pathname === path}
+                                        isNav={true}
                                         key={idx}
                                     >
                                         <Link
@@ -203,8 +208,22 @@ export default withRouter(
                                 ))}
                             </NavGroup>
                             <LoginBox>
-                                <NavLink isRoot={isRoot} isCurrent={true}>
-                                    <Link to="/login">로그인</Link>
+                                <NavLink
+                                    isRoot={isRoot}
+                                    isCurrent={pathname === "/login"}
+                                    isNav={false}
+                                >
+                                    <Link
+                                        to="/login"
+                                        onClick={() => {
+                                            handleMenuBtn({
+                                                isOn: false,
+                                                isBtn: false,
+                                            });
+                                        }}
+                                    >
+                                        로그인
+                                    </Link>
                                 </NavLink>
                             </LoginBox>
                         </Gnb>
