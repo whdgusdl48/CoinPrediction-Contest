@@ -72,10 +72,10 @@ const Gnb = styled.div`
         flex-direction: column;
         justify-content: initial;
         align-items: initial;
-        max-height: ${({ isOn }) => (isOn ? "290px" : "0")};
+        max-height: ${({ isOn }) => (isOn ? "274px" : "0")};
         overflow: hidden;
         background-color: #fff;
-        border: ${({ isOn }) => (isOn ? "1.5px" : "0")} solid #bcc8e0;
+        border: ${({ isOn }) => (isOn ? "1px" : "0")} solid #bcc8e0;
         border-left: none;
         border-right: none;
         transition: max-height ${({ isBtn }) => (isBtn ? "0.3s" : "0s")}
@@ -98,6 +98,7 @@ const NavGroup = styled.ul`
 const NavLink = styled.li`
     margin-left: 30px;
     font-weight: 500;
+    font-size: 16px;
     color: ${({ isRoot, isCurrent, isNav }) => {
         if (isRoot) {
             return "#000";
@@ -115,9 +116,10 @@ const NavLink = styled.li`
         color: ${({ isCurrent }) => (isCurrent ? "#fff" : "#000")};
         background-color: ${({ isCurrent }) =>
             isCurrent ? "#093687" : "#fff"};
-        border-bottom: 1.5px solid #bcc8e0;
+        border-bottom: 1px solid #bcc8e0;
         width: 100%;
-
+        font-size: 14px;
+        color: #303030;
         &:hover {
             color: #fff;
             background-color: #093687;
@@ -140,7 +142,7 @@ const LoginBox = styled.ul`
 `;
 
 const BlackScreen = styled.div`
-    display: ${({ isOn }) => (isOn ? "block" : "none")};
+    display: "none";
     position: fixed;
     top: 0;
     left: 0;
@@ -151,7 +153,7 @@ const BlackScreen = styled.div`
     opacity: 0.6;
 
     @media only screen and (max-width: 800px) {
-        display: none;
+        display: ${({ isOn }) => (isOn ? "block" : "none")};
     }
 `;
 
