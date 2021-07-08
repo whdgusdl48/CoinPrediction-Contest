@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/CoinPrediction-Contest/static/js/main.b68e919d.chunk.js",
+    "main.js.map": "/CoinPrediction-Contest/static/js/main.b68e919d.chunk.js.map",
+    "runtime-main.js": "/CoinPrediction-Contest/static/js/runtime-main.47656bc8.js",
+    "runtime-main.js.map": "/CoinPrediction-Contest/static/js/runtime-main.47656bc8.js.map",
+    "static/js/2.7054716d.chunk.js": "/CoinPrediction-Contest/static/js/2.7054716d.chunk.js",
+    "static/js/2.7054716d.chunk.js.map": "/CoinPrediction-Contest/static/js/2.7054716d.chunk.js.map",
+    "index.html": "/CoinPrediction-Contest/index.html",
+    "static/js/2.7054716d.chunk.js.LICENSE.txt": "/CoinPrediction-Contest/static/js/2.7054716d.chunk.js.LICENSE.txt",
+    "static/media/menu_button.f8235882.svg": "/CoinPrediction-Contest/static/media/menu_button.f8235882.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.47656bc8.js",
+    "static/js/2.7054716d.chunk.js",
+    "static/js/main.b68e919d.chunk.js"
+  ]
+}
