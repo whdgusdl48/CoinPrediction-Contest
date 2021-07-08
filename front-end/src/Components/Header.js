@@ -22,10 +22,13 @@ const Header = styled.header`
     align-items: center;
     width: 100%;
     height: 70px;
-    background-color: ${({ isRoot }) => (isRoot ? "#FFF" : "#093687")};
+    background-color: ${({ isRoot }) =>
+        isRoot ? "rgba(255,255,255, 1)" : "#093687"};
     color: ${({ isRoot }) => (isRoot ? "#000" : "#FFF")};
     box-shadow: 0 0 10px -5px #303030;
     z-index: 1000;
+    /* -webkit-backdrop-filter: blur(10px); */
+    /* backdrop-filter: blur(7px); */
 
     @media only screen and (max-width: 800px) {
         height: 50px;

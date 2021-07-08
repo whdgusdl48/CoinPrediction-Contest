@@ -2,4 +2,12 @@
 import React from "react";
 import styled from "styled-components";
 
-export default () => "홈";
+const Main = styled.div`
+    padding: 40px 0;
+`;
+
+export default () => (
+    <Main>
+        <div className="inner">홈</div>
+    </Main>
+);
