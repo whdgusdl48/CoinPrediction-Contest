@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/CoinPrediction-Contest/static/js/main.6fc62f30.chunk.js",
-    "main.js.map": "/CoinPrediction-Contest/static/js/main.6fc62f30.chunk.js.map",
+    "main.js": "/CoinPrediction-Contest/static/js/main.057d6586.chunk.js",
+    "main.js.map": "/CoinPrediction-Contest/static/js/main.057d6586.chunk.js.map",
     "runtime-main.js": "/CoinPrediction-Contest/static/js/runtime-main.47656bc8.js",
     "runtime-main.js.map": "/CoinPrediction-Contest/static/js/runtime-main.47656bc8.js.map",
     "static/js/2.7054716d.chunk.js": "/CoinPrediction-Contest/static/js/2.7054716d.chunk.js",
@@ -13,6 +13,6 @@
   "entrypoints": [
     "static/js/runtime-main.47656bc8.js",
     "static/js/2.7054716d.chunk.js",
-    "static/js/main.6fc62f30.chunk.js"
+    "static/js/main.057d6586.chunk.js"
   ]
 }
