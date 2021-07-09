@@ -31,7 +31,7 @@ const Header = styled.header`
     /* backdrop-filter: blur(7px); */
 
     @media only screen and (max-width: 800px) {
-        height: 50px;
+        height: 60px;
         background-color: #093687;
         color: #fff;
     }
@@ -54,7 +54,7 @@ const Logo = styled.div`
     color: ${({ isRoot }) => (isRoot ? "#093687" : "#FFF")};
 
     @media only screen and (max-width: 800px) {
-        font-size: 30px;
+        font-size: 36px;
         color: #fff;
     }
 `;
@@ -67,7 +67,7 @@ const Gnb = styled.div`
 
     @media only screen and (max-width: 800px) {
         position: absolute;
-        top: 50px;
+        top: 60px;
         left: 0;
         flex-direction: column;
         justify-content: initial;
@@ -113,13 +113,12 @@ const NavLink = styled.li`
 
     @media only screen and (max-width: 800px) {
         margin: 0;
-        color: ${({ isCurrent }) => (isCurrent ? "#fff" : "#000")};
+        color: ${({ isCurrent }) => (isCurrent ? "#fff" : "#303030")};
         background-color: ${({ isCurrent }) =>
             isCurrent ? "#093687" : "#fff"};
         border-bottom: 1px solid #bcc8e0;
         width: 100%;
         font-size: 14px;
-        color: #303030;
         &:hover {
             color: #fff;
             background-color: #093687;
@@ -156,6 +155,8 @@ const BlackScreen = styled.div`
         display: ${({ isOn }) => (isOn ? "block" : "none")};
     }
 `;
+
+const MenuBtn = styled.button``;
 
 export default withRouter(
     ({
@@ -236,14 +237,14 @@ export default withRouter(
                                 </NavLink>
                             </LoginBox>
                         </Gnb>
-                        <button
+                        <MenuBtn
                             className="mobileShow"
                             onClick={() => {
                                 handleMenuBtn({ isOn: !isOn, isBtn: true });
                             }}
                         >
                             <MenuBtnImg />
-                        </button>
+                        </MenuBtn>
                     </FlexBox>
                 </Header>
                 <BlackScreen
