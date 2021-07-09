@@ -42,7 +42,7 @@ const FlexBox = styled.div`
     align-items: center;
 
     @media only screen and (max-width: 800px) {
-        justify-content: space-between;
+        justify-content: center;
     }
 `;
 
@@ -156,7 +156,10 @@ const BlackScreen = styled.div`
     }
 `;
 
-const MenuBtn = styled.button``;
+const MenuBtn = styled.button`
+    position: absolute;
+    right: 20px;
+`;
 
 export default withRouter(
     ({
@@ -190,7 +193,6 @@ export default withRouter(
             <>
                 <Header isRoot={isRoot}>
                     <FlexBox className="inner">
-                        <div className="mobileShow"></div>
                         <Logo isRoot={isRoot}>
                             <Link to="/">Logo</Link>
                         </Logo>
