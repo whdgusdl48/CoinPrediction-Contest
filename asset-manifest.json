@@ -1,18 +1,25 @@
 {
   "files": {
-    "main.js": "/CoinPrediction-Contest/static/js/main.057d6586.chunk.js",
-    "main.js.map": "/CoinPrediction-Contest/static/js/main.057d6586.chunk.js.map",
-    "runtime-main.js": "/CoinPrediction-Contest/static/js/runtime-main.47656bc8.js",
-    "runtime-main.js.map": "/CoinPrediction-Contest/static/js/runtime-main.47656bc8.js.map",
-    "static/js/2.7054716d.chunk.js": "/CoinPrediction-Contest/static/js/2.7054716d.chunk.js",
-    "static/js/2.7054716d.chunk.js.map": "/CoinPrediction-Contest/static/js/2.7054716d.chunk.js.map",
+    "main.js": "/CoinPrediction-Contest/static/js/main.cf5f7474.chunk.js",
+    "main.js.map": "/CoinPrediction-Contest/static/js/main.cf5f7474.chunk.js.map",
+    "runtime-main.js": "/CoinPrediction-Contest/static/js/runtime-main.f0f108fe.js",
+    "runtime-main.js.map": "/CoinPrediction-Contest/static/js/runtime-main.f0f108fe.js.map",
+    "static/js/2.4ad8d238.chunk.js": "/CoinPrediction-Contest/static/js/2.4ad8d238.chunk.js",
+    "static/js/2.4ad8d238.chunk.js.map": "/CoinPrediction-Contest/static/js/2.4ad8d238.chunk.js.map",
     "index.html": "/CoinPrediction-Contest/index.html",
-    "static/js/2.7054716d.chunk.js.LICENSE.txt": "/CoinPrediction-Contest/static/js/2.7054716d.chunk.js.LICENSE.txt",
-    "static/media/menu_button.b5609e74.svg": "/CoinPrediction-Contest/static/media/menu_button.b5609e74.svg"
+    "static/js/2.4ad8d238.chunk.js.LICENSE.txt": "/CoinPrediction-Contest/static/js/2.4ad8d238.chunk.js.LICENSE.txt",
+    "static/media/admin_logo.9a61e8ba.png": "/CoinPrediction-Contest/static/media/admin_logo.9a61e8ba.png",
+    "static/media/cnu_com_logo.4357be22.JPG": "/CoinPrediction-Contest/static/media/cnu_com_logo.4357be22.JPG",
+    "static/media/cnu_logo.9e54ddbe.png": "/CoinPrediction-Contest/static/media/cnu_logo.9e54ddbe.png",
+    "static/media/grow_logo.f3133bfb.jpg": "/CoinPrediction-Contest/static/media/grow_logo.f3133bfb.jpg",
+    "static/media/kakaotalk.a031de0d.png": "/CoinPrediction-Contest/static/media/kakaotalk.a031de0d.png",
+    "static/media/main.e7c7ec42.png": "/CoinPrediction-Contest/static/media/main.e7c7ec42.png",
+    "static/media/menu_button.b5609e74.svg": "/CoinPrediction-Contest/static/media/menu_button.b5609e74.svg",
+    "static/media/probrain_logo.4bf65927.jpg": "/CoinPrediction-Contest/static/media/probrain_logo.4bf65927.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.47656bc8.js",
-    "static/js/2.7054716d.chunk.js",
-    "static/js/main.057d6586.chunk.js"
+    "static/js/runtime-main.f0f108fe.js",
+    "static/js/2.4ad8d238.chunk.js",
+    "static/js/main.cf5f7474.chunk.js"
   ]
 }
