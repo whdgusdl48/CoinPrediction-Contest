@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
     a {
         color: inherit;
         text-decoration: none;
+        font-family: inherit;
     }
 
     button {
@@ -25,6 +26,7 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
         padding: 0;
         margin: 0;
+        font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
     main {
