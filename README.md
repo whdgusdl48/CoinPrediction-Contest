@@ -16,7 +16,7 @@ React JS
 
 디자인 페이지 : https://www.miricanvas.com/v/1hg47w
 
--   [] 메인 페이지
+-   [o] 메인 페이지
 -   [x] 소개 페이지
 -   [x] 코인 데이터 페이지
 -   [x] 게시판 페이지
