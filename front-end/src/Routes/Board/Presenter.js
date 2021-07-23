@@ -6,12 +6,13 @@ import { Link } from "react-router-dom";
 const Main = styled.div`
   padding: 30px 100px;
   background-color: #e9ebf0;
-  height: 1000px;
+  min-height: 1000px;
 `;
 
 const MainContainer = styled.div`
   background-color: white;
-  height: 100%;
+  padding-bottom: 100px;
+  min-height: 1000px;
 `;
 
 const Container = styled.div`
@@ -53,11 +54,11 @@ const Table = styled.table`
   }
 `;
 const NoticeText = styled.span`
-  color: blue;
+  color: #093687;
   font-weight: 400;
   padding-right: 5px;
 `;
-export default () => (
+export default ({ info, dataFile }) => (
   <Main>
     <MainContainer>
       <Container>
@@ -65,45 +66,52 @@ export default () => (
         <Table>
           <thead>
             <tr>
-              <th colspan="1">제목</th>
-              <th colspan="1">등록일</th>
-              <th colspan="1">조회수</th>
+              <th>제목</th>
+              <th>등록일</th>
+              <th>조회수</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <Link>
-                  <NoticeText>[공지]</NoticeText>
-                  공지사항 입니다
-                </Link>
-              </td>
-              <td>2021-07-23</td>
-              <td>42</td>
-            </tr>
-            <tr>
-              <td>
-                <Link>
-                  <NoticeText>[공지]</NoticeText>
-                  공지사항 입니다
-                </Link>
-              </td>
-              <td>2021-07-23</td>
-              <td>42</td>
-            </tr>
-            <tr>
-              <td>
-                <Link>
-                  <NoticeText>[공지]</NoticeText>
-                  공지사항 입니다
-                </Link>
-              </td>
-              <td>2021-07-23</td>
-              <td>42</td>
-            </tr>
+            {info.map(({ title, date, views }, idx) => {
+              return (
+                <PrintContents
+                  title={title}
+                  date={date}
+                  views={views}
+                  idx={idx}
+                  info={true}
+                />
+              );
+            })}
+            {dataFile.map(({ title, date, views }, idx) => {
+              return (
+                <PrintContents
+                  title={title}
+                  date={date}
+                  views={views}
+                  idx={idx}
+                  info={false}
+                />
+              );
+            })}
           </tbody>
         </Table>
       </Container>
     </MainContainer>
   </Main>
 );
+
+function PrintContents(props) {
+  return (
+    <tr key={props.idx}>
+      <td>
+        <Link>
+          {props.info === true ? <NoticeText>[공지]</NoticeText> : null}
+          {props.title}
+        </Link>
+      </td>
+      <td>{props.date}</td>
+      <td>{props.views}</td>
+    </tr>
+  );
+}
