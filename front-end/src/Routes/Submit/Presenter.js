@@ -82,7 +82,7 @@ const Line = styled.span`
   border-right: 2px solid;
 `;
 const Box = styled.div`
-  margin: 70px 20px 30px 20px;
+  margin: 70px 50px 30px 40px;
   border: 2px solid #a0a0a0;
   border-radius: 10px;
   & > div {
@@ -93,7 +93,7 @@ const Box = styled.div`
 `;
 const Contents = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
 `;
 export default ({ data }) => {
