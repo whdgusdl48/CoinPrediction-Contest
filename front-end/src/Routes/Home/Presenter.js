@@ -229,7 +229,7 @@ const CoinData = styled.div`
     &:not(:first-child) {
         text-align: right;
         font-weight: 500;
-        color: ${() => (current) => current === true ? "#d60000" : "#0062df"};
+        color: ${() => (current) => current ? "#d60000" : "#0062df"};
     }
 `;
 
@@ -382,7 +382,6 @@ export default ({ notice, file, coinData, maxCoinData }) => {
                                       const name = coin["korean_name"];
                                       const rate =
                                           coin["signed_change_rate"].toFixed(3);
-
                                       const price = String(coin["trade_price"]);
                                       let textPrice = "";
 
