@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
         padding-top: 70px;
         min-height: calc(100vh - 120px);
 
+        background-color: #e9ebf0;
         @media only screen and (max-width: 800px) {
             padding-top: 60px;
         }
@@ -51,6 +52,10 @@ const GlobalStyles = createGlobalStyle`
         @media only screen and (max-width: 800px) {
             display: block;
         }
+    }
+
+    p, span, h1, h2, h3, h4, h5 {
+        line-height: 1.5;
     }
 `;
 

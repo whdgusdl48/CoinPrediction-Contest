@@ -1,13 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import styled from "styled-components";
-
-const Main = styled.div`
-    padding: 40px 0;
-`;
+import Content from "../../Components/Content";
 
 export default () => (
-    <Main>
-        <div className="inner">게시판</div>
-    </Main>
+    <Content>
+        <h1>게시판</h1>
+    </Content>
 );
