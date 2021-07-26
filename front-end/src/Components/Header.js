@@ -12,6 +12,7 @@ const navList = [
     { path: "/submit", name: "제출" },
     { path: "/board", name: "게시판" },
     { path: "/question", name: "문의" },
+    { path: "/news", name: "기사" },
 ];
 
 const Header = styled.header`
@@ -72,7 +73,7 @@ const Gnb = styled.div`
         flex-direction: column;
         justify-content: initial;
         align-items: initial;
-        max-height: ${({ isOn }) => (isOn ? "274px" : "0")};
+        max-height: ${({ isOn }) => (isOn ? "313px" : "0")};
         overflow: hidden;
         background-color: #fff;
         border: ${({ isOn }) => (isOn ? "1px" : "0")} solid #bcc8e0;
