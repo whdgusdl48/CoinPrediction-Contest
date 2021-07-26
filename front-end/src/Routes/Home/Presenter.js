@@ -216,12 +216,6 @@ const CoinTable = styled.div`
                 font-size: 14px;
             }
         }
-
-        /* & > div:not(:first-child) {
-            text-align: right;
-            color: #d60000;
-            font-weight: 500;
-        } */
     }
 `;
 
