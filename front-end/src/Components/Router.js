@@ -14,6 +14,7 @@ import Intro from "../Routes/Intro";
 import LeaderBoard from "../Routes/LeaderBoard";
 import Question from "../Routes/Question";
 import Submit from "../Routes/Submit";
+import News from "../Routes/News";
 import Login from "../Routes/Login";
 
 import Header from "../Components/Header";
@@ -30,6 +31,7 @@ export default () => (
                 <Route path="/submit" component={Submit} exact />
                 <Route path="/board" component={Board} exact />
                 <Route path="/question" component={Question} exact />
+                <Route path="/news" component={News} exact />
                 <Route path="/login" component={Login} exact />
                 <Redirect to="/" />
             </Switch>
