@@ -4,6 +4,13 @@ import styled from "styled-components";
 
 const Main = styled.div`
     padding: 40px 0px;
+
+    @media only screen and (max-width: 800px) {
+        padding: 0;
+        & > .inner {
+            padding: 0;
+        }
+    }
 `;
 
 const Content = styled.div`
@@ -14,9 +21,13 @@ const Content = styled.div`
     & > h1 {
         font-size: 26px;
         font-weight: 600;
-        padding-bottom: 15px;
+        padding-bottom: 10px;
         border-bottom: 1.5px solid #d0d0d0;
         margin-bottom: 40px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        padding: 60px 20px;
     }
 `;
 
