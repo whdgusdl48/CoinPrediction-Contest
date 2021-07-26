@@ -7,21 +7,29 @@ const Main = styled.div`
   padding: 30px 100px;
   background-color: #e9ebf0; //회색
   min-height: 1000px;
+  @media only screen and (max-width: 800px) {
+    padding: 20px 20px;
+  }
 `;
 
 const MainContainer = styled.div`
   background-color: white;
   height: 100%;
-  padding-bottom: 160px;
+  padding: 50px 100px;
+  @media only screen and (max-width: 800px) {
+    padding: 40px 20px;
+  }
 `;
 
 const Container = styled.div`
-  margin: 0 100px;
   & > h1 {
-    padding: 100px 0 30px 0;
+    padding: 30px 0;
     font-size: 30px;
     font-weight: 600;
     border-bottom: 2px solid #a0a0a0;
+    @media only screen and (max-width: 800px) {
+      padding-bottom: 30px;
+    }
   }
 `;
 const Dot = styled.span`
@@ -44,16 +52,26 @@ const Submit = styled.form`
     font-size: 30px;
     font-weight: 600;
   }
-  & > input {
-    margin-top: 40px;
-    padding: 5px;
-    font-size: 15px;
-    width: 90%;
-    border: 1px solid;
-  }
   & > div {
-    display: flex;
-    justify-content: center;
+    & > input {
+      margin-top: 40px;
+      padding: 5px;
+      font-size: 15px;
+      width: 90%;
+      border: 1px solid;
+    }
+    & > div {
+      display: flex;
+      justify-content: center;
+    }
+    @media only screen and (max-width: 800px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & > input {
+        margin-bottom: 10px;
+      }
+    }
   }
 `;
 const FileButton = styled.button`
@@ -93,7 +111,7 @@ const Box = styled.div`
 `;
 const Contents = styled.div`
   display: flex;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
 `;
 export default ({ data }) => {
@@ -153,12 +171,14 @@ function SubmitPage() {
       </Caution>
       <Submit>
         <h2>7일차 결과 데이터 제출 </h2>
-        <input type="text"></input>
-        <span>
-          <FileButton>파일첨부</FileButton>
-        </span>
         <div>
-          <SubmitButton>제출</SubmitButton>
+          <input type="text"></input>
+          <span>
+            <FileButton>파일첨부</FileButton>
+          </span>
+          <div>
+            <SubmitButton>제출</SubmitButton>
+          </div>
         </div>
       </Submit>
     </>

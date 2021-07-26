@@ -19,9 +19,6 @@ const Logo = styled.div`
   font-style: italic;
   color: #093687;
   margin-bottom: 30px;
-  @media only screen and (max-width: 800px) {
-    font-size: 36px;
-  }
 `;
 const TextField = styled.input`
   margin-top: 20px;
