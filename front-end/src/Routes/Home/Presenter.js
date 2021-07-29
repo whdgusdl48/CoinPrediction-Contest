@@ -223,7 +223,7 @@ const CoinData = styled.div`
     &:not(:first-child) {
         text-align: right;
         font-weight: 500;
-        color: ${() => (current) => current ? "#d60000" : "#0062df"};
+        color: ${({ current }) => (current ? "#d60000" : "#0062df")};
     }
 `;
 

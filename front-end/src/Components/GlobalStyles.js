@@ -11,6 +11,11 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+
+        @media only screen and (max-width: 800px) {
+            font-size: 14px;
+        }
     }
 
     a {

@@ -28,6 +28,10 @@ const Content = styled.div`
 
     @media only screen and (max-width: 800px) {
         padding: 60px 20px;
+
+        & > h1 {
+            font-size: 22px;
+        }
     }
 `;
 

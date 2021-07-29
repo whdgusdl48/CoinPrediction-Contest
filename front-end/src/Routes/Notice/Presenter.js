@@ -18,8 +18,8 @@ const Board = styled.div`
 const Head = styled.div`
     border-top: 1.5px solid #cacaca;
     background-color: #093687;
-    color: #fff;
     font-weight: 500;
+    color: #fff;
 
     & > div:first-child {
         text-align: center;
@@ -68,7 +68,7 @@ const Views = styled.div`
     }
 `;
 
-export default ({ news }) => (
+export default ({ info, dataFile }) => (
     <Content>
         <h1>게시판</h1>
         <Board>
@@ -77,7 +77,19 @@ export default ({ news }) => (
                 <Date>등록일</Date>
                 <Views>조회수</Views>
             </Head>
-            {news.map((item, idx) => (
+            {info.map((item, idx) => (
+                <Notice key={idx}>
+                    <Title>
+                        <Link>
+                            <NoticeAlert>[공지] </NoticeAlert>
+                            {item.title}
+                        </Link>
+                    </Title>
+                    <Date>{item.date}</Date>
+                    <Views>{item.views}</Views>
+                </Notice>
+            ))}
+            {dataFile.map((item, idx) => (
                 <DataFile key={idx}>
                     <Title>
                         <Link>{item.title}</Link>
