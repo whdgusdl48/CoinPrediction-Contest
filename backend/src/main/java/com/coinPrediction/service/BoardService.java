@@ -1,4 +1,4 @@
 package com.coinPrediction.service;
 
-public class BoardService {
+public interface BoardService {
 }

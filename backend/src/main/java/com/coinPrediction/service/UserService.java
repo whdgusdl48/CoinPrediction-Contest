@@ -1,4 +1,4 @@
 package com.coinPrediction.service;
 
-public class UserService {
+public interface UserService {
 }
