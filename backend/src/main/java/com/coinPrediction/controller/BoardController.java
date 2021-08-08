@@ -1,6 +1,6 @@
 package com.coinPrediction.controller;
 
-import com.coinPrediction.domain.BoardDTO;
+import com.coinPrediction.domain.Board;
 import com.coinPrediction.service.BoardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,12 +16,12 @@ public class BoardController {
     private BoardService boardService;
 
     @GetMapping("/api/board/{idx}")
-    public BoardDTO selectBoardDetail(@PathVariable Long idx) {
+    public Board selectBoardDetail(@PathVariable Long idx) {
         return boardService.getBoardDetail(idx);
     }
 
     @GetMapping("/api/boards")
-    public List<BoardDTO> getBoardList() {
+    public List<Board> getBoardList() {
         return boardService.getBoardList();
     }
 }

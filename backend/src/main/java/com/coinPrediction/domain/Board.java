@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class BoardDTO {
+public class Board {
 
     @Id
     private Long idx;

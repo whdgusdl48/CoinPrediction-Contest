@@ -1,4 +1,4 @@
 package com.coinPrediction.domain;
 
-public class UserDTO {
+public class Submit {
 }

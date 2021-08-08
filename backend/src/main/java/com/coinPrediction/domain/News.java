@@ -1,4 +1,4 @@
 package com.coinPrediction.domain;
 
-public class QuestionDTO {
+public class News {
 }

@@ -1,12 +1,12 @@
 package com.coinPrediction.service;
 
-import com.coinPrediction.domain.BoardDTO;
+import com.coinPrediction.domain.Board;
 
 import java.util.List;
 
 public interface BoardService {
 
-    public BoardDTO getBoardDetail(Long idx);
+    public Board getBoardDetail(Long idx);
 
-    public List<BoardDTO> getBoardList();
+    public List<Board> getBoardList();
 }
