@@ -18,10 +18,7 @@ public class BoardController {
 
     @GetMapping("/api/board/{idx}")
     public Board selectBoardDetail(@PathVariable Long idx) {
-        Board board = boardService.getBoardDetail(idx);
-        // 세션 이용해서 조회수 중복 없이 올라가는 기능 추가해야 함.
-        board.setHit(board.getHit());
-        return board;
+        return boardService.getBoardDetail(idx);
     }
 
     @GetMapping("/api/boards")
