@@ -11,6 +11,7 @@ public class BoardServiceImpl implements BoardService{
     @Autowired
     private BoardRepository boardRepository;
 
+    @Override
     public Board getBoardDetail(Long idx) {
         return boardRepository.findByIdx(idx);
     }
