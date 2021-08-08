@@ -2,20 +2,21 @@ package com.coinPrediction.service;
 
 import com.coinPrediction.domain.BoardDTO;
 import com.coinPrediction.repository.BoardRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 public class BoardServiceImpl implements BoardService{
 
-    // mongodb랑 연계해서 구현해야 함.
-    @Override
+    @Autowired
+    private BoardRepository boardRepository;
+
     public BoardDTO getBoardDetail(Long idx) {
-        BoardDTO entity = BoardRepository.findByIdx(idx);
-        return entity;
+        return boardRepository.findByIdx(idx);
     }
 
     @Override
     public List<BoardDTO> getBoardList() {
-        return null;
+        return boardRepository.findAll();
     }
 }
