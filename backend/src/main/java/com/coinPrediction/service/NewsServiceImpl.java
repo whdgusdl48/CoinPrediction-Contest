@@ -15,7 +15,8 @@ public class NewsServiceImpl implements NewsService {
     public News getNewsDetaill(Long idx) {
         News news = newsRepository.findByIdx(idx);
         // 세션 이용한 중복 처리 추가해야 함.
-        news.setHit(news.getHit());
+        // db에 저장하는 걸로 바꿔야 함.
+        news.setHit(news.getHit() + 1);
         return news;
     }
 
