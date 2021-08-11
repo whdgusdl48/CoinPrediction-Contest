@@ -6,12 +6,13 @@ import styled from "styled-components";
 import { ReactComponent as MenuBtnImg } from "../img/menu_button.svg";
 
 const navList = [
-    { path: "/intro", name: "소개" },
-    { path: "/coin", name: "코인데이터" },
-    { path: "/leaderboard", name: "리더보드" },
-    { path: "/submit", name: "제출" },
-    { path: "/board", name: "게시판" },
-    { path: "/question", name: "문의" },
+    { path: "/intro", pathName: "intro", name: "소개" },
+    { path: "/coin", pathName: "coin", name: "코인데이터" },
+    { path: "/leaderboard", pathName: "leader", name: "리더보드" },
+    { path: "/submit/form", pathName: "submit", name: "제출" },
+    { path: "/notice", pathName: "notice", name: "게시판" },
+    { path: "/question", pathName: "question", name: "문의" },
+    { path: "/news", pathName: "news", name: "기사" },
 ];
 
 const Header = styled.header`
@@ -72,7 +73,7 @@ const Gnb = styled.div`
         flex-direction: column;
         justify-content: initial;
         align-items: initial;
-        max-height: ${({ isOn }) => (isOn ? "274px" : "0")};
+        max-height: ${({ isOn }) => (isOn ? "313px" : "0")};
         overflow: hidden;
         background-color: #fff;
         border: ${({ isOn }) => (isOn ? "1px" : "0")} solid #bcc8e0;
@@ -194,30 +195,44 @@ export default withRouter(
                 <Header isRoot={isRoot}>
                     <FlexBox className="inner">
                         <Logo isRoot={isRoot}>
-                            <Link to="/">Logo</Link>
+                            <Link
+                                to="/"
+                                onClick={() => {
+                                    handleMenuBtn({
+                                        isOn: false,
+                                        isBtn: false,
+                                    });
+                                }}
+                            >
+                                Logo
+                            </Link>
                         </Logo>
                         <Gnb isOn={isOn} isBtn={isBtn}>
                             <NavGroup>
-                                {navList.map(({ path, name }, idx) => (
-                                    <NavLink
-                                        isRoot={isRoot}
-                                        isCurrent={pathname === path}
-                                        isNav={true}
-                                        key={idx}
-                                    >
-                                        <Link
-                                            to={path}
-                                            onClick={() => {
-                                                handleMenuBtn({
-                                                    isOn: false,
-                                                    isBtn: false,
-                                                });
-                                            }}
+                                {navList.map(
+                                    ({ path, pathName, name }, idx) => (
+                                        <NavLink
+                                            isRoot={isRoot}
+                                            isCurrent={pathname.includes(
+                                                pathName
+                                            )}
+                                            isNav={true}
+                                            key={idx}
                                         >
-                                            {name}
-                                        </Link>
-                                    </NavLink>
-                                ))}
+                                            <Link
+                                                to={path}
+                                                onClick={() => {
+                                                    handleMenuBtn({
+                                                        isOn: false,
+                                                        isBtn: false,
+                                                    });
+                                                }}
+                                            >
+                                                {name}
+                                            </Link>
+                                        </NavLink>
+                                    )
+                                )}
                             </NavGroup>
                             <LoginBox>
                                 <NavLink

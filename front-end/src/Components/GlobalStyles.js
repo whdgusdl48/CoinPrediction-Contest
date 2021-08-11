@@ -11,6 +11,11 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+
+        @media only screen and (max-width: 800px) {
+            font-size: 14px;
+        }
     }
 
     a {
@@ -33,6 +38,7 @@ const GlobalStyles = createGlobalStyle`
         padding-top: 70px;
         min-height: calc(100vh - 120px);
 
+        background-color: #e9ebf0;
         @media only screen and (max-width: 800px) {
             padding-top: 60px;
         }
@@ -51,6 +57,10 @@ const GlobalStyles = createGlobalStyle`
         @media only screen and (max-width: 800px) {
             display: block;
         }
+    }
+
+    p, span, h1, h2, h3, h4, h5 {
+        line-height: 1.5;
     }
 `;
 
