@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Document(collation = "Board")
+@Document(collection = "Board")
 public class Board {
 
     @Id
@@ -34,4 +34,5 @@ public class Board {
         this.imgPath = imgPath;
         this.date = date;
     }
+
 }
