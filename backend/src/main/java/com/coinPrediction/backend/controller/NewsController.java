@@ -23,4 +23,6 @@ public class NewsController {
     @GetMapping("/api/newses")
     public List<News> getNewsList() { return newsService.getNewsList(); }
 
+    @GetMapping("/api/news/pages/{idx}")
+    public List<News> getNewsPage(@PathVariable Long idx) { return newsService.getNewsPage(idx); }
 }

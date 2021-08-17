@@ -4,6 +4,10 @@ import com.coinPrediction.backend.domain.News;
 import com.coinPrediction.backend.exception.RestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.AggregationResults;
+import org.springframework.data.mongodb.core.aggregation.LimitOperation;
+import org.springframework.data.mongodb.core.aggregation.SkipOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +33,18 @@ public class NewsServiceImpl implements NewsService {
     @Override
     public List<News> getNewsList() {
         return mongoTemplate.findAll(News.class);
+    }
+
+    @Override
+    public List<News> getNewsPage(Long idx) {
+        SkipOperation skip = Aggregation.skip((idx - 1) * 10);
+        LimitOperation limit = Aggregation.limit(idx * 10);
+
+        Aggregation aggregation = Aggregation.newAggregation(limit, skip);
+        AggregationResults<News> results = mongoTemplate.aggregate(aggregation, "News", News.class);
+
+        List<News> news = results.getMappedResults();
+        return news;
     }
 
 }

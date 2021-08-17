@@ -8,4 +8,6 @@ public interface NewsService {
     public News getNews(Long idx);
 
     public List<News> getNewsList();
+
+    public List<News> getNewsPage(Long idx);
 }
