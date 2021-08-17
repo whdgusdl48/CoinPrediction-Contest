@@ -1,7 +1,8 @@
 package com.coinPrediction.backend.service;
 
 import com.coinPrediction.backend.domain.Submit;
-import com.coinPrediction.backend.repository.SubmitRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -9,11 +10,12 @@ import java.util.Optional;
 @Service
 public class SubmitServiceImpl implements SubmitService{
 
-    SubmitRepository submitRepository;
+    @Autowired
+    private MongoTemplate mongoTemplate;
 
     @Override
-    public Optional<Submit> getSubmitDetail(String id) {
-        return submitRepository.findById(id);
+    public void insertSubmitData(Submit submit) {
+        mongoTemplate.insert(submit);
     }
 
 }

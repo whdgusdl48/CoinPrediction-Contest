@@ -14,10 +14,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Submit {
     @Id
-    String id;
-    String teamName;
-    String[] filepath;
-    LocalDateTime[] submitDate;
+    private String id;
+    private String teamName;
+    private String[] filepath;
+    private LocalDateTime[] submitDate;
 
     @Builder
     Submit(String id, String teamName, String[] filepath, LocalDateTime[] submitDate) {

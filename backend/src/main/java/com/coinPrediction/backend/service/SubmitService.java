@@ -5,5 +5,7 @@ import com.coinPrediction.backend.domain.Submit;
 import java.util.Optional;
 
 public interface SubmitService {
-    public Optional<Submit> getSubmitDetail(String id);
+
+    public void insertSubmitData(Submit submit);
+
 }
