@@ -18,7 +18,7 @@ public class QuestionController {
 
     @PostMapping("/api/Question")
     public void sendQuestionMail(@RequestBody Map<String, String> req) {
-        Question question = Question.builder().teamname(req.get("teamname"))
+        Question question = Question.builder().teamName(req.get("teamname"))
                 .title(req.get("title")).content(req.get("content")).build();
         questionService.sendMail(question);
     }
