@@ -9,4 +9,6 @@ public interface BoardService {
     public Board getBoardDetail(Long idx);
 
     public List<Board> getBoardList();
+
+    public List<Board> getBoardPages(Long idx);
 }

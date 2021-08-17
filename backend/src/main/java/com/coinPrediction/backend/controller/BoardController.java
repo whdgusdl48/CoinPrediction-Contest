@@ -25,4 +25,9 @@ public class BoardController {
         return boardService.getBoardList();
     }
 
+    @GetMapping("/api/board/pages/{idx}")
+    public List<Board> getBoardPages(@PathVariable Long idx) {
+        return boardService.getBoardPages(idx);
+    }
+
 }

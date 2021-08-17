@@ -5,6 +5,10 @@ import com.coinPrediction.backend.exception.RestException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.AggregationResults;
+import org.springframework.data.mongodb.core.aggregation.LimitOperation;
+import org.springframework.data.mongodb.core.aggregation.SkipOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +17,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class BoardServiceImpl implements BoardService{
+public class BoardServiceImpl implements BoardService {
 
     @Autowired
     MongoTemplate mongoTemplate;
@@ -30,5 +34,17 @@ public class BoardServiceImpl implements BoardService{
     @Override
     public List<Board> getBoardList() {
         return mongoTemplate.findAll(Board.class);
+    }
+
+    @Override
+    public List<Board> getBoardPages(Long idx) {
+        SkipOperation skip = Aggregation.skip((idx - 1) * 10);
+        LimitOperation limit = Aggregation.limit(idx * 10);
+
+        Aggregation aggregation = Aggregation.newAggregation(limit, skip);
+        AggregationResults<Board> results = mongoTemplate.aggregate(aggregation, "Board", Board.class);
+
+        List<Board> board = results.getMappedResults();
+        return board;
     }
 }
