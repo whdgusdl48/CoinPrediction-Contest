@@ -3,6 +3,7 @@ package com.coinPrediction.backend.service;
 import com.coinPrediction.backend.domain.Board;
 import com.coinPrediction.backend.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

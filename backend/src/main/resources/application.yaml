@@ -3,7 +3,8 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: TotalCluster
+      database: coin
+
   mail :
     host : smtp.gmail.com
     port : 587
