@@ -12,12 +12,13 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Document(collation = "Leaderboard")
+@Document(collection = "Leaderboard")
 public class Leaderboard {
+
     @Id
     String id;
     String teamName;
     String score;
-    LocalDateTime upddateDate;
+    LocalDateTime updateDate;
 
 }

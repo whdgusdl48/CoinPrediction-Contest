@@ -14,7 +14,9 @@ public class LeaderboardController {
     @Autowired
     LeaderboardServiceImpl leaderboardService;
 
-    @GetMapping("/api/leaderboard")
-    public List<Leaderboard> getLeaderboardList() { return leaderboardService.getLeaderboardList(); }
+    @GetMapping("/api/leaderboards")
+    public List<Leaderboard> getLeaderboardList() {
+        return leaderboardService.getLeaderboardList();
+    }
 
 }
