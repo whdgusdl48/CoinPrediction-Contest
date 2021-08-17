@@ -15,10 +15,12 @@ public class Member {
     @Id
     private Long id;
     private String password;
+    private String teamName;
 
     @Builder
-    public Member(Long id, String password) {
+    public Member(Long id, String password, String teamName) {
         this.id = id;
         this.password = password;
+        this.teamName = teamName;
     }
 }

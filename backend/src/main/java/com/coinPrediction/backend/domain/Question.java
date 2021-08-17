@@ -1,20 +1,19 @@
 package com.coinPrediction.backend.domain;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Question {
 
-    String teamname;
+    String teamName;
     String title;
     String content;
 
     @Builder
-    Question(String teamname, String title, String content) {
-        this.teamname = teamname;
+    Question(String teamName, String title, String content) {
+        this.teamName = teamName;
         this.title = title;
         this.content = content;
     }

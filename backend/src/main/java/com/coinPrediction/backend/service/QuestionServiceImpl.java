@@ -15,7 +15,7 @@ public class QuestionServiceImpl implements QuestionService{
     @Override
     public void sendMail(Question question) {
         StringBuilder sb = new StringBuilder();
-        sb.append(question.getTeamname()).append("-").append(question.getTitle());
+        sb.append(question.getTeamName()).append("-").append(question.getTitle());
 
         SimpleMailMessage message = new SimpleMailMessage();
         message.setTo("whdgusdl97@gmail.com");
