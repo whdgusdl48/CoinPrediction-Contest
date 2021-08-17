@@ -16,10 +16,11 @@ public class NewsController {
     NewsServiceImpl newsService;
 
     @GetMapping("/api/news/{idx}")
-    public News selectNewsDetail(@PathVariable Long idx) {
-        return newsService.getNewsDetaill(idx);
+    public News getNews (@PathVariable Long idx) {
+        return newsService.getNews(idx);
     }
 
-    @GetMapping("/api/News")
+    @GetMapping("/api/newses")
     public List<News> getNewsList() { return newsService.getNewsList(); }
+
 }

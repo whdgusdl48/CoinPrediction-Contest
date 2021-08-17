@@ -5,7 +5,7 @@ import com.coinPrediction.backend.domain.News;
 import java.util.List;
 
 public interface NewsService {
-    public News getNewsDetaill(Long idx);
+    public News getNews(Long idx);
 
     public List<News> getNewsList();
 }

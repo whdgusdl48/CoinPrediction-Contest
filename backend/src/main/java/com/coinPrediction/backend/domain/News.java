@@ -17,9 +17,8 @@ public class News {
 
     @Id
     Long idx;
-    String teamname;
     String title;
-    LocalDateTime date;
     String content;
     Long hit;
+    LocalDateTime date;
 }
