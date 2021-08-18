@@ -33,14 +33,14 @@ public class NewsServiceImpl implements NewsService {
         // 쿠키가 있는지 체크
         if (cookies != null && cookies.length > 0) {
             for (int i = 0; i < cookies.length; i++) {
-                if (cookies[i].getName().equals("cookie" + idx)) {
+                if (cookies[i].getName().equals("news-cookie" + idx)) {
                     thisCookie = cookies[i];
                 }
             }
         }
 
         if (thisCookie == null) {
-            Cookie newCookie = new Cookie("cookie" + idx,String.valueOf(idx));
+            Cookie newCookie = new Cookie("news-cookie" + idx,String.valueOf(idx));
             response.addCookie(newCookie);
 
             news.setHit(news.getHit() + 1);
