@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -16,8 +18,8 @@ public class NewsController {
     NewsServiceImpl newsService;
 
     @GetMapping("/api/news/{idx}")
-    public News getNews (@PathVariable Long idx) {
-        return newsService.getNews(idx);
+    public News getNews (HttpServletRequest request, HttpServletResponse response, @PathVariable Long idx) {
+        return newsService.getNews(request, response, idx);
     }
 
     @GetMapping("/api/newses")
