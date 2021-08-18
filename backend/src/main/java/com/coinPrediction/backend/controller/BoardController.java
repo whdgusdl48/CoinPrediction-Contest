@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 
@@ -16,8 +18,8 @@ public class BoardController {
     private BoardServiceImpl boardService;
 
     @GetMapping("/api/board/{idx}")
-    public Board selectBoardDetail(@PathVariable Long idx) {
-        return boardService.getBoardDetail(idx);
+    public Board selectBoardDetail(HttpServletResponse response, HttpServletRequest request, @PathVariable Long idx) {
+        return boardService.getBoardDetail(response, request, idx);
     }
 
     @GetMapping("/api/boards")
