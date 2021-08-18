@@ -46,6 +46,7 @@ public class NewsServiceImpl implements NewsService {
             news.setHit(news.getHit() + 1);
             mongoTemplate.save(news);
         }
+
         return Optional.ofNullable(news).orElseThrow(() ->
                 new RestException(HttpStatus.NOT_FOUND, "Not found news"));
     }
