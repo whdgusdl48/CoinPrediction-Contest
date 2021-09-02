@@ -16,10 +16,15 @@ public class UserController {
     private UserServiceImpl userService;
 
     @PostMapping("/api/save")
-    public void saveUser(@RequestBody Map<String, String> req) {
+    public boolean saveUser(@RequestBody Map<String, String> req) {
         User user = User.builder().id(req.get("id")).email(req.get("email"))
                 .name(req.get("name")).password(req.get("password")).build();
-        userService.saveTest(user);
+        return userService.saveTest(user);
+    }
+
+    @PostMapping("/api/login")
+    public String login(@RequestBody User user) {
+        return userService.validatePassword(user);
     }
 
 }

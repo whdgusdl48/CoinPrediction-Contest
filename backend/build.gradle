@@ -28,6 +28,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 // https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
 	implementation 'io.springfox:springfox-boot-starter:3.0.0'
+	// 비밀번호 암호화
+	implementation 'org.mindrot:jbcrypt:0.4'
 }
 
 test {
