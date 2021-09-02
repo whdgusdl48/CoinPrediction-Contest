@@ -1,7 +1,6 @@
 package com.coinPrediction.backend.service;
 
 import com.coinPrediction.backend.domain.Board;
-import com.coinPrediction.backend.domain.News;
 import com.coinPrediction.backend.exception.RestException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
